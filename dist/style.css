@@ -1,0 +1,88 @@
+/* colors */
+/* header font */
+/* font sizes */
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FB8985), to(#FFC29C));
+  background: -o-linear-gradient(#FB8985, #FFC29C);
+  background: linear-gradient(#FB8985, #FFC29C);
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button, .button {
+  background-color: #F7FFF7;
+  color: #474350;
+  border-radius: 25px;
+  border: none;
+  padding: 1rem 1.875rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.header {
+  background-color: #F7FFF7;
+}
+.header nav {
+  padding: 10px;
+}
+.header__title {
+  display: block;
+  font-family: "Grechen Fuemen", cursive;
+  font-size: 1.125rem;
+  color: #474350;
+}
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #474350;
+}
+.header__menu > span:not(:last-child) {
+  margin-bottom: 3px;
+}
+.header__links a {
+  font-size: 0.875rem;
+  color: #474350;
+}

@@ -13,23 +13,30 @@
     <title>canned</title>
  </head>
  <body>
-    <div class="wrapper">
-      <nav class="navbar">
-         <div class="logo">LOGO CANNED</div>
-         <ul>
-            <li><a href="">about</a></li>
-            <li><a href="">digital</a></li>
-            <li><a href="">crafts</a></li>
-            <li><a href="">contact</a></li>
-         </ul>
+   <div class="wrapper">
+      <header class="header">
+      <nav class="navbar flex flex-jc-sb flex-ai-c">
+         <p class="header__title">canned</p>
+         <a href="#" class="header__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+         </a>
+         <div class="header__links flex flex-jc-sb">
+            <a href="#">about</a>
+            <a href="#">digital</a>
+            <a href="#">crafts</a>
+            <a href="#">contact</a>
+         </div>
       </nav>
-      <div class="header">
-         <div class="header__about">
-            <h1 class="header__about__title">canned</h1>
-            <h2 class="header__about__subtitle">makin furry magic</h2>
+   </header>
+      <div class="hero">
+         <div class="hero__about">
+            <h1 class="hero__about__title">canned</h1>
+            <h2 class="hero__about__subtitle">makin furry magic</h2>
             <button class="button">explore</button>
          </div>
-         <div class="header__image"></div>
+         <div class="hero__image"></div>
       </div>
       <section class="features">
          <div class="features__about">
@@ -52,8 +59,7 @@
 
       </section>
       <footer class="footer"></footer>
-
-    </div>
-    <script scr="script/script.js"></script>
+   </div>
+    <script src="app/script.js"></script>
  </body>
  </html>

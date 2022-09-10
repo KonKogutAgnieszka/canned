@@ -1,0 +1,37 @@
+.header{
+    background-color: $white;
+    nav {
+        padding:10px;
+    }
+
+    &__title{
+        display: block;
+        font-family: $handwrite;
+        font-size: $font-med;
+        color:$black;
+    }
+
+    &__menu{ //menu mobile
+        > span {
+            display:block;
+            width:26px;
+            height:2px;
+            background-color: $black;
+
+            &:not(:last-child){
+                margin-bottom: 3px;
+            }
+
+        }
+    }
+    
+    &__links{
+
+        a {
+            font-size:$font-sm;
+            color:$black;
+           }
+        }
+
+
+}
