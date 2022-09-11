@@ -13,6 +13,7 @@ body{
     margin:0;
     padding: 0;
     font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 300;
    
 }
 
@@ -49,6 +50,22 @@ button, .button{
   border:none;
   padding:1rem 1.875rem;
   font-size:$font-med;
+  font-weight: 600;
   cursor:pointer;
 }
 
+//Visibility
+
+.hide-for-mobile{
+  //hide for tablet and mobile
+@include breakpoint-down(medium){
+  display: none;
+}
+}
+
+.hide-for-desktop{
+  //hide for desktop
+  @include breakpoint-up(large){
+    display: none;
+  }
+}

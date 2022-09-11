@@ -1,13 +1,14 @@
 .header{
     background-color: $white;
     nav {
-        padding:10px;
+        padding:20px;
+        height: calc(2 * $font-xl);
     }
 
     &__title{
         display: block;
         font-family: $handwrite;
-        font-size: $font-med;
+        font-size: $font-xl;
         color:$black;
     }
 
@@ -30,8 +31,36 @@
         a {
             font-size:$font-sm;
             color:$black;
+            &:not(:last-child){
+                margin-right: 32px;
+            }
            }
+        a:hover{
+            color:$burgund;
+        }
         }
 
 
 }
+
+// desktop
+
+@include breakpoint-up(large){
+    .header{
+        &__title{
+            font-size: $font-xxl;
+        }
+        
+        &__links{
+    
+            a {
+                font-size:$font-med;
+            }
+    
+    
+    }
+  }
+}
+
+
+
