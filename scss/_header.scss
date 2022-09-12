@@ -80,9 +80,14 @@
 }
 
 .header__mobilemenu{
+    position: absolute;
+    margin-top:1.5rem;
+    padding:1.625rem;
+    width: calc(100% - 3rem);
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
     background-color: $white;
-    width: 80%;
-    margin:10%;
     a{
         display: block;
         padding:0.65rem;

@@ -24,6 +24,9 @@ body {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 300;
 }
+body.noscroll {
+  overflow: hidden;
+}
 
 .wrapper {
   background: -webkit-gradient(linear, left top, left bottom, from(#FB8985), to(#FFC29C));
@@ -84,6 +87,10 @@ button, .button {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.has-fade {
+  visibility: hidden;
 }
 
 @-webkit-keyframes fade-in {
@@ -233,9 +240,16 @@ button, .button {
 }
 
 .header__mobilemenu {
+  position: absolute;
+  margin-top: 1.5rem;
+  padding: 1.625rem;
+  width: calc(100% - 3rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 6px;
   background-color: #F7FFF7;
-  width: 80%;
-  margin: 10%;
 }
 .header__mobilemenu a {
   display: block;
