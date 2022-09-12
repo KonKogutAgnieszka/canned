@@ -1,0 +1,16 @@
+.hero{
+    width: 100%;
+    .portrait{
+        display: block;
+        width: 50%;
+    }
+    .hero__about{
+        width: 80%;
+        text-align: center;
+    }
+    .paws{
+        width: 100%;
+        height: 20%;
+        background-color: red;
+    }
+}

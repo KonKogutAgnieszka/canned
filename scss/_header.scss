@@ -1,5 +1,6 @@
 .header{
     background-color: $white;
+    width: 100%;
     nav {
         padding:20px;
         height: calc(2 * $font-xl);
@@ -12,34 +13,82 @@
         color:$black;
     }
 
-    &__menu{ //menu mobile
+    &__menu{ //hamburger menu mobile
         > span {
             display:block;
             width:26px;
             height:2px;
             background-color: $black;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
 
             &:not(:last-child){
-                margin-bottom: 3px;
+                margin-bottom: 5px;
             }
 
+        }
+        &.open{
+           >span:first-child {
+            transform: rotate(45deg);
+           }
+           >span:nth-child(2){
+            opacity:0;
+           }
+           >span:last-child{
+            transform: rotate(-45deg);
+           }
         }
     }
     
     &__links{
-
-        a {
+        a{
+            position: relative;
             font-size:$font-sm;
             color:$black;
+            transition: 200ms ease-in-out;
+
+            &::before{
+                content: "";
+                position: absolute;
+                display: block;
+                height: 5px;
+                left:0;
+                right: 0;
+                bottom:-24px;
+                border-bottom: 2px solid $burgund;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
             &:not(:last-child){
                 margin-right: 32px;
+            }
+            &.tos{
+                background: $background-gradient;
+                border-radius: 45%;
             }
            }
         a:hover{
             color:$burgund;
+
+            &::before{
+                opacity: 1;
+            }
         }
         }
 
+
+}
+
+.header__mobilemenu{
+    background-color: $white;
+    width: 80%;
+    margin:10%;
+    a{
+        display: block;
+        padding:0.65rem;
+        color:$black;
+        text-align: center;
+    }
 
 }
 
@@ -60,6 +109,18 @@
     
     }
   }
+}
+
+.overlay{
+    visibility: hidden;
+    position: fixed;
+    height: auto;
+    top:4rem;
+    right: 0;
+    bottom: 0;
+    left:0;
+
+    background-image: linear-gradient(#fb8985,#FFC29C70);
 }
 
 

@@ -1,12 +1,18 @@
+
 html{
     font-size: 100%;
     box-sizing: border-box;
-    font-size:1.125rem;
+    font-size:1rem;
     line-height: 1.3;
 }
 
 *,*::before, *::after{
   box-sizing: inherit;  
+}
+
+//spacing
+.container{
+  padding: 1.0625rem 1.5rem;
 }
 
 body{
@@ -18,7 +24,8 @@ body{
 }
 
 .wrapper{
-  background: linear-gradient(#FB8985,#FFC29C);
+  background: $background-gradient;
+  width: auto;
 }
 
 a,a:visited,a:hover{
@@ -28,6 +35,10 @@ a,a:visited,a:hover{
 //Flexbox
 .flex{
 display: flex;
+
+&-fd-c{
+  flex-direction: column;
+}
 
 &-jc-sb{
   justify-content: space-between;

@@ -5,13 +5,17 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.3;
 }
 
 *, *::before, *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+.container {
+  padding: 1.0625rem 1.5rem;
 }
 
 body {
@@ -25,6 +29,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#FB8985), to(#FFC29C));
   background: -o-linear-gradient(#FB8985, #FFC29C);
   background: linear-gradient(#FB8985, #FFC29C);
+  width: auto;
 }
 
 a, a:visited, a:hover {
@@ -35,6 +40,12 @@ a, a:visited, a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .flex-jc-sb {
   -webkit-box-pack: justify;
@@ -75,8 +86,75 @@ button, .button {
   }
 }
 
+@-webkit-keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
+}
+
 .header {
   background-color: #F7FFF7;
+  width: 100%;
 }
 .header nav {
   padding: 20px;
@@ -93,19 +171,77 @@ button, .button {
   width: 26px;
   height: 2px;
   background-color: #474350;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+      -ms-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
 }
 .header__menu > span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+}
+.header__menu.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.header__menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+.header__menu.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .header__links a {
+  position: relative;
   font-size: 0.875rem;
   color: #474350;
+  -webkit-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+.header__links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -24px;
+  border-bottom: 2px solid #651B40;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 .header__links a:not(:last-child) {
   margin-right: 32px;
 }
+.header__links a.tos {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FB8985), to(#FFC29C));
+  background: -o-linear-gradient(#FB8985, #FFC29C);
+  background: linear-gradient(#FB8985, #FFC29C);
+  border-radius: 45%;
+}
 .header__links a:hover {
   color: #651B40;
+}
+.header__links a:hover::before {
+  opacity: 1;
+}
+
+.header__mobilemenu {
+  background-color: #F7FFF7;
+  width: 80%;
+  margin: 10%;
+}
+.header__mobilemenu a {
+  display: block;
+  padding: 0.65rem;
+  color: #474350;
+  text-align: center;
 }
 
 @media (min-width: 64em) {
@@ -115,4 +251,33 @@ button, .button {
   .header__links a {
     font-size: 1.125rem;
   }
+}
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  height: auto;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fb8985), to(rgba(255, 194, 156, 0.4392156863)));
+  background-image: -o-linear-gradient(#fb8985, rgba(255, 194, 156, 0.4392156863));
+  background-image: linear-gradient(#fb8985, rgba(255, 194, 156, 0.4392156863));
+}
+
+.hero {
+  width: 100%;
+}
+.hero .portrait {
+  display: block;
+  width: 50%;
+}
+.hero .hero__about {
+  width: 80%;
+  text-align: center;
+}
+.hero .paws {
+  width: 100%;
+  height: 20%;
+  background-color: red;
 }
