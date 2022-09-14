@@ -15,7 +15,28 @@ html {
 }
 
 .container {
+  margin: 0 auto;
   padding: 1.0625rem 1.5rem;
+}
+.container--py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--pt {
+  padding-top: 2.25rem;
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--pb {
+  padding-bottom: 2.25rem;
+}
+.container--pl {
+  padding-left: 1.5rem;
 }
 
 body {
@@ -67,6 +88,7 @@ a, a:visited, a:hover {
 }
 
 button, .button {
+  display: inline-block;
   background-color: #F7FFF7;
   color: #474350;
   border-radius: 25px;
@@ -87,6 +109,15 @@ button, .button {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.under_construction {
+  margin: 0 auto;
+  height: 100vh;
+  width: 70vh;
+  background-image: url("/images/under_construction.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .has-fade {
@@ -216,7 +247,7 @@ button, .button {
   height: 5px;
   left: 0;
   right: 0;
-  bottom: -24px;
+  bottom: -20px;
   border-bottom: 2px solid #651B40;
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
@@ -280,18 +311,56 @@ button, .button {
 }
 
 .hero {
-  width: 100%;
-}
-.hero .portrait {
-  display: block;
-  width: 50%;
-}
-.hero .hero__about {
-  width: 80%;
+  margin-top: 1.5rem;
+  height: 80vh;
   text-align: center;
 }
-.hero .paws {
+@media (min-width: 64em) {
+  .hero {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.hero__image {
+  margin-bottom: 1.5rem;
+  min-height: 17.5rem;
   width: 100%;
-  height: 20%;
-  background-color: red;
+  background-image: url("/images/portrait.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media (min-width: 64em) {
+  .hero__about {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-item-align: center;
+        align-self: center;
+    max-width: 40vw;
+  }
+}
+.hero__about h1 {
+  font-weight: 600;
+  font-size: 2.375rem;
+  line-height: 1.15;
+  color: #474350;
+}
+.hero__about p {
+  width: 100%;
 }

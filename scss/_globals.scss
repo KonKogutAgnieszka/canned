@@ -12,7 +12,28 @@ html{
 
 //spacing
 .container{
+  margin:0 auto;
   padding: 1.0625rem 1.5rem;
+  &--py{
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+  &--px{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--pt{
+    padding-top: 2.25rem;
+  }
+  &--pr{
+    padding-right: 1.5rem;
+  }
+  &--pb{
+    padding-bottom: 2.25rem;
+  }
+  &--pl{
+    padding-left: 1.5rem;
+  }
 }
 
 body{
@@ -57,6 +78,7 @@ display: flex;
 //Button
 
 button, .button{
+  display: inline-block;
   background-color: $white;
   color:$black;
   border-radius: 25px;
@@ -82,3 +104,13 @@ button, .button{
     display: none;
   }
 }
+
+//UNDER CONSTRUCTION
+ .under_construction{
+  margin: 0 auto;
+  height: 100vh;
+  width: 70vh;
+  background-image: url('/images/under_construction.png');
+  background-repeat: no-repeat;
+  background-position: center;
+ }
