@@ -4,6 +4,8 @@ const hamburger = document.querySelector(".header__menu");
 const overlay = document.querySelector(".overlay");
 const menuMobile = document.querySelector(".header__mobilemenu");
 
+//animated menu mobile //
+
 hamburger.addEventListener("click", () => {
   body.classList.toggle("noscroll");
   hamburger.classList.toggle("open");
@@ -24,3 +26,18 @@ hamburger.addEventListener("click", () => {
     menuMobile.classList.remove("fade-out");
   }
 });
+
+//animated features//
+
+const imgDigital = document.querySelector(".digital");
+const imgCrafts = document.querySelector(".crafts");
+
+const digital = [
+  "../images/features/digital1.jpg",
+  "../images/features/digital2.jpg",
+  "../images/features/digital3.jpg",
+];
+const crafts = [
+  "../images/features/crafts1.jpg",
+  "../images/features/crafts2.jpg",
+];
