@@ -115,7 +115,7 @@ button, .button {
   margin: 0 auto;
   height: 100vh;
   width: 70vh;
-  background-image: url("images/under_construction.png");
+  background-image: url("../images/under_construction.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -330,7 +330,7 @@ button, .button {
   margin-bottom: 1.5rem;
   min-height: 17.5rem;
   width: 100%;
-  background-image: url("images/portrait.png");
+  background-image: url("../images/portrait.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
