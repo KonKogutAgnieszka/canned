@@ -1,4 +1,7 @@
 .hero{
+    margin:0 auto;
+    display: block;
+    width: 90%;
     color:$black;
     @include breakpoint-up(large){
         padding:2rem;
@@ -6,7 +9,8 @@
         justify-content: center;
     }
     margin-top:1.5rem;
-    height: 80vh;
+    min-height: 85vh;
+    height: auto;
     text-align: center;
     &__image{
         margin-bottom:1.5rem;

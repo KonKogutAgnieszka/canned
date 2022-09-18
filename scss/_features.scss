@@ -1,8 +1,9 @@
 .features{
+    min-height: 100vh;
     .feature__item{
         @include breakpoint-up(large){
-            margin: 0 auto;
-        width: 80%;
+        margin: 0 auto;
+        width: 70%;
         flex-direction: row;
         text-align: left;
         &:nth-child(2){
@@ -13,8 +14,8 @@
         flex-direction: column;
         text-align: center;
         .feature__item__image{
-            width:15rem;
-            height: 15rem;
+            width:12rem;
+            height: 12rem;
             border-radius: 50%;
             background-position: center; 
             background-size: contain;  

@@ -50,6 +50,9 @@ body {
   padding: 0;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 300;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FB8985), to(#FFC29C));
+  background: -o-linear-gradient(#FB8985, #FFC29C);
+  background: linear-gradient(#FB8985, #FFC29C);
 }
 body.noscroll {
   overflow: hidden;
@@ -60,6 +63,7 @@ body.noscroll {
   background: -o-linear-gradient(#FB8985, #FFC29C);
   background: linear-gradient(#FB8985, #FFC29C);
   width: auto;
+  height: auto;
 }
 
 a, a:visited, a:hover {
@@ -124,6 +128,14 @@ button, .button {
   background-image: url("../images/under_construction.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+a {
+  display: inline-block;
+}
+
+.text-deco {
+  font-family: "Grechen Fuemen", cursive;
 }
 
 .has-fade {
@@ -317,9 +329,13 @@ button, .button {
 }
 
 .hero {
+  margin: 0 auto;
+  display: block;
+  width: 90%;
   color: #474350;
   margin-top: 1.5rem;
-  height: 80vh;
+  min-height: 85vh;
+  height: auto;
   text-align: center;
 }
 @media (min-width: 64em) {
@@ -373,6 +389,9 @@ button, .button {
   width: 100%;
 }
 
+.features {
+  min-height: 100vh;
+}
 .features .feature__item {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -383,7 +402,7 @@ button, .button {
 @media (min-width: 64em) {
   .features .feature__item {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -399,8 +418,8 @@ button, .button {
   }
 }
 .features .feature__item .feature__item__image {
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
   background-position: center;
   background-size: contain;
@@ -420,4 +439,14 @@ button, .button {
 
 .crafts {
   background-image: url("../images/features/crafts1.jpg");
+}
+
+.contact {
+  margin: 0 auto;
+  width: 80%;
+}
+.contact h2 {
+  color: #474350;
+  font-size: 3rem;
+  font-weight: 300;
 }
