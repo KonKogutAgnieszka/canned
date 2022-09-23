@@ -17,9 +17,13 @@
             width:12rem;
             height: 12rem;
             border-radius: 50%;
+            border: 2px solid $black;
             background-position: center; 
             background-size: contain;  
             background-repeat: no-repeat;
+        }
+        .feature__item__image:hover{
+            background-size: 105%;
         }
         .feature__item__about{
             color:$black;

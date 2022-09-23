@@ -107,6 +107,14 @@ button, .button {
   font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
+  -webkit-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+button:hover {
+  color: #F7FFF7;
+  background-color: #B83253;
 }
 
 @media (max-width: 63.937em) {
@@ -421,9 +429,13 @@ a {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
+  border: 2px solid #474350;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+.features .feature__item .feature__item__image:hover {
+  background-size: 105%;
 }
 .features .feature__item .feature__item__about {
   color: #474350;

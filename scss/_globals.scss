@@ -96,6 +96,11 @@ button, .button{
   font-size:$font-med;
   font-weight: 600;
   cursor:pointer;
+  transition: ease-in-out .3s;
+}
+button:hover{
+  color:$white;
+  background-color:$darkpink;
 }
 
 //Visibility
