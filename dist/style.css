@@ -53,6 +53,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#FB8985), to(#FFC29C));
   background: -o-linear-gradient(#FB8985, #FFC29C);
   background: linear-gradient(#FB8985, #FFC29C);
+  background-repeat: no-repeat;
 }
 body.noscroll {
   overflow: hidden;
@@ -90,6 +91,10 @@ a, a:visited, a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.flex-jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .flex-ai-c {
   -webkit-box-align: center;
@@ -461,4 +466,32 @@ a {
   color: #474350;
   font-size: 3rem;
   font-weight: 300;
+}
+
+.digital__title {
+  color: #474350;
+}
+
+.price {
+  background-color: #F7FFF7;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 1em;
+}
+.price__header {
+  text-align: center;
+}
+.price__type__image {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+}
+.price__character__image {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+}
+
+.price > h3 {
+  text-align: center;
 }
