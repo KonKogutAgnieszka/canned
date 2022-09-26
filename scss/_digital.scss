@@ -5,29 +5,54 @@
 
 .price{
     background-color: $white;
+    box-shadow: 4px 4px 4px 4px $black ;
     margin: 0 auto;
     width: 80%;
     border-radius: 1em;
+    padding: 1rem;
     &__header{
         text-align: center;
+        margin-top:1rem;
     }
-    &__type{
-        &__image{
-            width:100px;
-            height: 100px;
-            border: 2px solid black;
+    &__style{
+        background-repeat: no-repeat;
+        background-size: cover;
+        &:first-child{
+        background-image: url('../images/features/pricelist/style_sketch.jpg');
+        }
+        &:nth-child(2){
+        background-image: url('../images/features/pricelist/style_clean.jpg');
+        }
+        &:last-child{
+        background-image: url('../images/features/pricelist/style_polished.jpg');
         }
     }
     &__character{
-        &__image{
-            width:100px;
-            height: 100px;
-            border: 2px solid black;
-        }
-
+    }
+    &__type{
     }
 }
 
+.select{
+border: 3px solid $darkpink ;
+}
+
+.image{
+    cursor:pointer; 
+    display: block; 
+    width:100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: box-shadow: 2px 2px 2px 2px $black ;;
+}
+
+
 .price>h3{
     text-align: center;
+}
+
+.price__value{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
 }

@@ -474,24 +474,48 @@ a {
 
 .price {
   background-color: #F7FFF7;
+  -webkit-box-shadow: 4px 4px 4px 4px #474350;
+          box-shadow: 4px 4px 4px 4px #474350;
   margin: 0 auto;
   width: 80%;
   border-radius: 1em;
+  padding: 1rem;
 }
 .price__header {
   text-align: center;
+  margin-top: 1rem;
 }
-.price__type__image {
+.price__style {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.price__style:first-child {
+  background-image: url("../images/features/pricelist/style_sketch.jpg");
+}
+.price__style:nth-child(2) {
+  background-image: url("../images/features/pricelist/style_clean.jpg");
+}
+.price__style:last-child {
+  background-image: url("../images/features/pricelist/style_polished.jpg");
+}
+.select {
+  border: 3px solid #B83253;
+}
+
+.image {
+  cursor: pointer;
+  display: block;
   width: 100px;
   height: 100px;
-  border: 2px solid black;
-}
-.price__character__image {
-  width: 100px;
-  height: 100px;
-  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .price > h3 {
   text-align: center;
+}
+
+.price__value {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
 }
