@@ -1,0 +1,74 @@
+.price {
+  background-color: $white;
+  color: $black;
+  box-shadow: 4px 4px 4px 4px $black;
+  margin: 0 auto 2rem;
+  width: 80%;
+  border-radius: 1em;
+  padding: 1rem;
+  &__header {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  &__style {
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:first-child {
+      background-image: url("../images/features/pricelist/style_sketch.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("../images/features/pricelist/style_clean.jpg");
+    }
+    &:last-child {
+      background-image: url("../images/features/pricelist/style_polished.jpg");
+    }
+  }
+}
+
+.select {
+  border: 3px solid $darkpink;
+}
+
+.image {
+  cursor: pointer;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px $black;
+  transition: ease-in-out 0.2s;
+}
+
+.price > h3 {
+  text-align: center;
+}
+
+.price__value {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+//desktop
+
+@include breakpoint-up(large) {
+  .price {
+    width: 70%;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@include breakpoint-up(xlarge) {
+  .price {
+    width: 50%;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+}

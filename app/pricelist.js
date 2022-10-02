@@ -39,7 +39,9 @@ function displayPrice() {
   let character = currentChoice.character;
   let type = currentChoice.type;
 
-  let currentPrice = stylePrices[style][character] * typePrices[type];
+  let currentPrice = Math.round(
+    stylePrices[style][character] * typePrices[type]
+  );
   priceValue.innerHTML = `${currentPrice}$`;
 }
 
