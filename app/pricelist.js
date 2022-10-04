@@ -33,16 +33,18 @@ const styleTab = [...document.querySelectorAll(".price__style.image")];
 const characterTab = [...document.querySelectorAll(".price__character.image")];
 const typeTab = [...document.querySelectorAll(".price__type.image")];
 const priceValue = document.querySelector(".price__value");
+const extraCharacter = document.querySelector(".extra__character");
 
 function displayPrice() {
   let style = currentChoice.style;
   let character = currentChoice.character;
   let type = currentChoice.type;
+  let currentPrice = stylePrices[style][character] * typePrices[type];
+  if (extraCharacter.checked === true) {
+    currentPrice = currentPrice + currentPrice * 0.85;
+  }
 
-  let currentPrice = Math.round(
-    stylePrices[style][character] * typePrices[type]
-  );
-  priceValue.innerHTML = `${currentPrice}$`;
+  priceValue.innerHTML = `${Math.round(currentPrice)}$`;
 }
 
 function removeBorders(tab) {
@@ -84,5 +86,7 @@ typeTab.forEach((type) =>
     e.target.classList.toggle("select");
   })
 );
+
+extraCharacter.addEventListener("change", displayPrice);
 
 displayPrice();

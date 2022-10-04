@@ -1,9 +1,9 @@
 .price {
   background-color: $white;
   color: $black;
-  box-shadow: 4px 4px 4px 4px $black;
-  margin: 0 auto 2rem;
-  width: 80%;
+  box-shadow: 2px 2px 2px 2px $black;
+  margin: 1rem auto 2rem;
+  width: 90%;
   border-radius: 1em;
   padding: 1rem;
   &__header {
@@ -32,10 +32,10 @@
 .image {
   cursor: pointer;
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px 2px $black;
+  box-shadow: 1px 1px 1px 1px $black;
   transition: ease-in-out 0.2s;
 }
 
