@@ -40,6 +40,30 @@
   }
 }
 
+.digital__gallery__popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(#ffc29c99, #4743509a);
+  &__arrow {
+    height: 50px;
+    cursor: pointer;
+  }
+  &__image {
+    display: block;
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
+.hide {
+  transform: translateY(100vh);
+}
+
 @include breakpoint-up(large) {
   .digital__section {
     width: 50%;

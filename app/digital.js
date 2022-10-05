@@ -12,8 +12,19 @@ galleryImg.forEach((item) => {
   }
 });
 
-galleryImg.forEach((item) => {
-  item.addEventListener("click", () => {
-    console.log(item.src);
+//gallery popup//
+
+const galleryPopup = document.querySelector(".digital__gallery__popup");
+const galleryPopupImgSrc = document.getElementById("galleryPopupImg").src;
+
+//galleries type//
+const sketchGallery = document.querySelectorAll(
+  ".digital__section__gallery.sketch img"
+);
+
+sketchGallery.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    let imgSource = e.target.src;
+    galleryPopup.classList.toggle("hide");
   });
 });
