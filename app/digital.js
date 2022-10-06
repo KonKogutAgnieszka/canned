@@ -15,16 +15,21 @@ galleryImg.forEach((item) => {
 //gallery popup//
 
 const galleryPopup = document.querySelector(".digital__gallery__popup");
-const galleryPopupImgSrc = document.getElementById("galleryPopupImg").src;
-
-//galleries type//
-const sketchGallery = document.querySelectorAll(
-  ".digital__section__gallery.sketch img"
+const galleryPopupImg = document.querySelector(
+  ".digital__gallery__popup__image"
+);
+const galleryPopupClose = document.querySelector(
+  ".digital__gallery__popup__close__img"
 );
 
-sketchGallery.forEach((item) => {
+galleryImg.forEach((item) => {
   item.addEventListener("click", (e) => {
-    let imgSource = e.target.src;
+    console.log(galleryPopupImg);
     galleryPopup.classList.toggle("hide");
+    galleryPopupImg.src = e.target.src;
   });
+});
+
+galleryPopupClose.addEventListener("click", () => {
+  galleryPopup.classList.toggle("hide");
 });

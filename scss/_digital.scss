@@ -43,12 +43,26 @@
 .digital__gallery__popup {
   position: fixed;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(#ffc29c99, #4743509a);
+  background-image: linear-gradient(#ffc29ccd, #474350d3);
+  &__close {
+    display: flex;
+    justify-content: flex-end;
+    &__img {
+      margin-right: 10px;
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 90%;
+  }
   &__arrow {
     height: 50px;
     cursor: pointer;
