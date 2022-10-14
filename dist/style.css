@@ -673,3 +673,29 @@ a {
     height: 150px;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.tos__wrapper {
+  margin: 4%;
+  text-align: center;
+}
+
+tos__subtitle {
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.digital__gallery__popup__arrow--down {
+  position: fixed;
+  height: 50px;
+  bottom: 2%;
+  right: 2%;
+}
