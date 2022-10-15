@@ -1,21 +1,35 @@
 html {
   scroll-behavior: smooth;
 }
+.tos__header {
+  h1 {
+    font-size: $font-med;
+  }
+  h2 {
+    font-size: $font-med;
+  }
+}
 .tos__wrapper {
   margin: 4%;
   text-align: center;
 }
-tos__subtitle {
+.tos__subtitle {
   font-size: $font-xl;
 }
-ul {
+
+.tos__content {
   list-style: none;
   padding-left: 0;
   text-align: left;
   font-size: $font-lg;
+  @include breakpoint-up(large) {
+    font-size: $font-med;
+    color: red;
+  }
 }
 
 .digital__gallery__popup__arrow--down {
+  cursor: pointer;
   position: fixed;
   height: 50px;
   bottom: 2%;

@@ -497,6 +497,7 @@ a {
 .digital__section__title {
   font-family: "Grechen Fuemen", cursive;
   font-size: 2rem;
+  font-weight: 400;
 }
 .digital__section__gallery {
   display: grid;
@@ -677,23 +678,37 @@ html {
   scroll-behavior: smooth;
 }
 
+.tos__header h1 {
+  font-size: 1.125rem;
+}
+.tos__header h2 {
+  font-size: 1.125rem;
+}
+
 .tos__wrapper {
   margin: 4%;
   text-align: center;
 }
 
-tos__subtitle {
+.tos__subtitle {
   font-size: 2rem;
 }
 
-ul {
+.tos__content {
   list-style: none;
   padding-left: 0;
   text-align: left;
   font-size: 1.5rem;
 }
+@media (min-width: 64em) {
+  .tos__content {
+    font-size: 1.125rem;
+    color: red;
+  }
+}
 
 .digital__gallery__popup__arrow--down {
+  cursor: pointer;
   position: fixed;
   height: 50px;
   bottom: 2%;
