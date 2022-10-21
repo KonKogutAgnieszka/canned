@@ -1,45 +1,44 @@
-.features{
-    min-height: 100vh;
-    .feature__item{
-        @include breakpoint-up(large){
-        margin: 0 auto;
-        width: 70%;
-        flex-direction: row;
-        text-align: left;
-        &:nth-child(2){
-            flex-direction: row-reverse;
-            text-align: right;
-        }
-        }
-        flex-direction: column;
-        text-align: center;
-        .feature__item__image{
-            width:12rem;
-            height: 12rem;
-            border-radius: 50%;
-            border: 2px solid $black;
-            background-position: center; 
-            background-size: contain;  
-            background-repeat: no-repeat;
-        }
-        .feature__item__image:hover{
-            background-size: 105%;
-        }
-        .feature__item__about{
-            color:$black;
-            h2{
-                font-size: $font-xl;
-                font-weight: 300;
-            }
-        }
-        
-
-        }
+.features {
+  min-height: 100vh;
+  .feature__item {
+    @include breakpoint-up(large) {
+      margin: 0 auto;
+      width: 70%;
+      flex-direction: row;
+      text-align: left;
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+    }
+    flex-direction: column;
+    text-align: center;
+    .feature__item__image {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      border: 2px solid $black;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .feature__item__image:hover {
+      background-size: 105%;
+    }
+    .feature__item__about {
+      color: $black;
+      width: 60%;
+      h2 {
+        font-size: $font-xl;
+        font-weight: 300;
+      }
+    }
+  }
 }
 
-.digital{
-    background-image: url('../images/features/digital1.jpg');
+.digital {
+  background-image: url("../images/features/digital1.jpg");
 }
-.crafts{
-    background-image: url('../images/features/crafts1.jpg');
+.crafts {
+  background-image: url("../images/features/crafts1.jpg");
 }

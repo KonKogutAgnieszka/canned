@@ -1,46 +1,46 @@
-.hero{
-    margin:0 auto;
-    display: block;
-    width: 90%;
-    color:$black;
-    @include breakpoint-up(large){
-        padding:2rem;
-        display: flex;
-        justify-content: center;
-    }
-    margin-top:1.5rem;
-    min-height: 85vh;
-    height: auto;
-    text-align: center;
-    &__image{
-        margin-bottom:1.5rem;
-        min-height: 17.5rem;
-        width:100%;
-        background-image: url('../images/portrait.png');
-        background-size:contain;
-        background-repeat: no-repeat;
-        background-position: center center;
+.hero {
+  margin: 0 auto;
+  display: block;
+  width: 90%;
+  color: $black;
+  @include breakpoint-up(large) {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  margin-top: 1.5rem;
+  min-height: 85vh;
+  height: auto;
+  text-align: center;
+  &__image {
+    margin-bottom: 0.5em;
+    min-height: 17.5rem;
+    width: 100%;
+    background-image: url("../images/portrait.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 
-        @include breakpoint-up(large){
-            flex:1;
-            order:2;
-        }
+    @include breakpoint-up(large) {
+      flex: 1;
+      order: 2;
     }
-    &__about{
-        @include breakpoint-up(large){
-            display: block;
-            order:1;
-            align-self: center;
-            max-width: 40vw;
-        }
-        h1{
-            font-weight: 600;
-            font-size:2.375rem;
-            line-height: 1.15;
-            color:$black;
-        }
-        p{
-            width: 100%;
-        }
+  }
+  &__about {
+    @include breakpoint-up(large) {
+      display: block;
+      order: 1;
+      align-self: center;
+      max-width: 40vw;
     }
+    h1 {
+      font-weight: 600;
+      font-size: 2.375rem;
+      line-height: 1.15;
+      color: $black;
+    }
+    p {
+      width: 100%;
+    }
+  }
 }

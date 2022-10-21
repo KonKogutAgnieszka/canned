@@ -1,9 +1,55 @@
-.contact{
-    margin:0 auto;
-    width: 80%;
-    h2{
-        color: $black;
-        font-size: $font-xxl;
-        font-weight: 300;
+.contact {
+  margin: 0 auto 2em;
+  padding: 1em;
+  width: 80%;
+  background-color: $white;
+  border-radius: 1em;
+  @include breakpoint-up(large) {
+    width: 60%;
+  }
+  h2 {
+    text-align: center;
+    color: $black;
+    font-size: $font-lg;
+    font-weight: 300;
+  }
+  &__container {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: $font-med;
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      justify-content: space-around;
     }
+    &__right {
+      @include breakpoint-up(large) {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__left {
+      @include breakpoint-up(large) {
+        width: 45%;
+      }
+    }
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+  }
+  &__button {
+    display: block;
+    margin: 0.8em auto;
+    border: solid 2px $burgund;
+  }
+}
+
+.input__frame {
+  border: solid 2px $burgund;
+  border-radius: 0.5em;
+  font-size: $font-med;
+  resize: none;
 }

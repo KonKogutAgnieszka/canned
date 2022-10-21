@@ -3,10 +3,12 @@ html {
 }
 .tos__header {
   h1 {
-    font-size: $font-med;
+    color: $black;
+    font-size: $font-xl;
   }
   h2 {
-    font-size: $font-med;
+    color: $black;
+    font-size: $font-lg;
   }
 }
 .tos__wrapper {
@@ -14,17 +16,18 @@ html {
   text-align: center;
 }
 .tos__subtitle {
-  font-size: $font-xl;
+  color: $black;
+  font-size: $font-med;
 }
 
 .tos__content {
+  color: $black;
   list-style: none;
   padding-left: 0;
   text-align: left;
   font-size: $font-lg;
   @include breakpoint-up(large) {
     font-size: $font-med;
-    color: red;
   }
 }
 

@@ -1,17 +1,19 @@
 .digital__title {
+  margin: 2em;
   text-align: center;
   color: $black;
+  font-weight: 500;
 }
 
 .digital__section {
   &__title {
-    font-family: $handwrite;
+    margin: 0.5em 0;
     font-size: $font-xl;
     font-weight: 400;
   }
   margin: 0 auto;
   display: flex;
-  padding: 1em 0.5em;
+  padding: 1em 0.5em 3em;
   flex-direction: column;
   text-align: center;
   width: 90%;
@@ -20,6 +22,7 @@
   box-shadow: 2px 2px 2px 2px $black;
   color: $black;
   &__gallery {
+    padding: 0 1em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-template-rows: auto;
@@ -98,10 +101,17 @@
     width: 50%;
     &__gallery {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 0 3em;
       &__item {
         width: 150px;
         height: 150px;
       }
     }
   }
+}
+
+.back {
+  margin: 2em;
+  display: flex;
+  justify-content: center;
 }
