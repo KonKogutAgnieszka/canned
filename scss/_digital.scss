@@ -23,18 +23,11 @@
   color: $black;
   &__gallery {
     padding: 0 1em;
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-    /*
-    display: gird;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: auto;
     place-items: center;
     width: auto;
-    */
     &__item {
       margin: 10px auto;
       display: block;
