@@ -37,7 +37,7 @@
       <div class="header__mobilemenu has-fade">
         <a href="#features">about</a>
         <a href="digital.html">digital</a>
-        <a href="#">crafts</a>
+        <a href="crafts.html">crafts</a>
         <a class="tos" href="tos.html">ToS</a>
         <a href="#contact">contact</a>
       </div>
@@ -63,7 +63,9 @@
         <div class="feature__item__image digital"></div>
         <div class="feature__item__about container--pall">
           <h2>digital</h2>
-          <p>Check out my digital ilustration.</p>
+          <p>
+            check out my digital ilustration. see gallery and current pricing.
+          </p>
           <a href="digital.html"><button>more</button></a>
         </div>
       </div>
@@ -71,22 +73,25 @@
         <div class="feature__item__image crafts"></div>
         <div class="feature__item__about container--pall">
           <h2>crafts</h2>
-          <p>
-            Cat ipsum dolor sit amet Cat ipsum dolor sit ametCat ipsum dolor sit
-            ametCat ipsum dolor sit amet
-          </p>
+          <p>oh - thats something new for me. check out my craft gallery.</p>
           <a href="crafts.html"><button>more</button></a>
         </div>
       </div>
     </section>
     <section id="contact" class="contact">
       <h2>contact</h2>
-      <form action="">
+      <form action="https://formspree.io/f/mdojlqzv" method="POST">
         <div class="contact__container">
           <div class="contact__container__left">
             <div class="contact__input">
-              <label class="contact__input__label" for="">name</label>
-              <input class="input__frame" type="text" placeholder="your name" />
+              <label class="contact__input__label" for="name">name</label>
+              <input
+                class="input__frame"
+                type="text"
+                placeholder="your name"
+                name="name"
+                required
+              />
             </div>
             <div class="contact__input">
               <label class="contact__input__label" for="">email</label>
@@ -94,6 +99,8 @@
                 class="input__frame"
                 type="email"
                 placeholder="your@email.com"
+                name="email"
+                required
               />
             </div>
           </div>
@@ -104,11 +111,13 @@
                 class="input__frame"
                 rows="4"
                 placeholder="message"
+                name="message"
+                required
               ></textarea>
             </div>
           </div>
         </div>
-        <button class="button contact__button">submit</button>
+        <button type="submit" class="button contact__button">submit</button>
       </form>
     </section>
     <footer class="footer"></footer>

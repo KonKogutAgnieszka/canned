@@ -18,6 +18,9 @@ html {
 .tos__subtitle {
   color: $black;
   font-size: $font-med;
+  &__contact {
+    color: $black;
+  }
 }
 
 .tos__content {
