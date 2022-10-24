@@ -300,7 +300,7 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(#fb8985), to(#ffc29c));
   background: -o-linear-gradient(#fb8985, #ffc29c);
   background: linear-gradient(#fb8985, #ffc29c);
-  border-radius: 45%;
+  border-radius: 55%;
 }
 .header__links a:hover {
   color: #651b40;
@@ -579,7 +579,7 @@ a {
   font-weight: 400;
 }
 .digital__section__gallery {
-  padding: 0 1em;
+  padding: 0 0.2em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-template-rows: auto;
@@ -659,8 +659,8 @@ a {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .hide {
@@ -713,13 +713,26 @@ a {
   background-size: cover;
 }
 .price__style:first-child {
-  background-image: url("../images/features/pricelist/style_sketch.jpg");
+  background-image: url("../images/digital/pricelist/type_sketch.png");
 }
 .price__style:nth-child(2) {
-  background-image: url("../images/features/pricelist/style_clean.jpg");
+  background-image: url("../images/digital/pricelist/type_clean.png");
 }
 .price__style:last-child {
-  background-image: url("../images/features/pricelist/style_polished.jpg");
+  background-image: url("../images/digital/pricelist/type_polished.jpg");
+}
+.price__character {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.price__character:first-child {
+  background-image: url("../images/digital/pricelist/character_headshot.png");
+}
+.price__character:nth-child(2) {
+  background-image: url("../images/digital/pricelist/character_halfbody.png");
+}
+.price__character:last-child {
+  background-image: url("../images/digital/pricelist/character_fullbody.png");
 }
 
 .select {
@@ -729,8 +742,8 @@ a {
 .image {
   cursor: pointer;
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 10px;
   -webkit-box-shadow: 1px 1px 1px 1px #23202c;
           box-shadow: 1px 1px 1px 1px #23202c;
@@ -760,8 +773,8 @@ a {
     width: 50%;
   }
   .image {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
   }
   .price > h3 {
     font-size: 1.125rem;

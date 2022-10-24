@@ -22,7 +22,7 @@
   box-shadow: 2px 2px 2px 2px $black;
   color: $black;
   &__gallery {
-    padding: 0 1em;
+    padding: 0 0.2em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: auto;
@@ -87,8 +87,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 80%;
+    max-height: 80%;
   }
 }
 

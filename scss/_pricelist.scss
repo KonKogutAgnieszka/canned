@@ -16,13 +16,26 @@
     background-repeat: no-repeat;
     background-size: cover;
     &:first-child {
-      background-image: url("../images/features/pricelist/style_sketch.jpg");
+      background-image: url("../images/digital/pricelist/type_sketch.png");
     }
     &:nth-child(2) {
-      background-image: url("../images/features/pricelist/style_clean.jpg");
+      background-image: url("../images/digital/pricelist/type_clean.png");
     }
     &:last-child {
-      background-image: url("../images/features/pricelist/style_polished.jpg");
+      background-image: url("../images/digital/pricelist/type_polished.jpg");
+    }
+  }
+  &__character {
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:first-child {
+      background-image: url("../images/digital/pricelist/character_headshot.png");
+    }
+    &:nth-child(2) {
+      background-image: url("../images/digital/pricelist/character_halfbody.png");
+    }
+    &:last-child {
+      background-image: url("../images/digital/pricelist/character_fullbody.png");
     }
   }
 }
@@ -34,8 +47,8 @@
 .image {
   cursor: pointer;
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px $black;
   transition: ease-in-out 0.2s;
@@ -65,8 +78,8 @@
   }
 
   .image {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
   }
 
   .price > h3 {
