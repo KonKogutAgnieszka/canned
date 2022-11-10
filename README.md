@@ -1,6 +1,6 @@
 canned
 
-> Website for freelancer artist. [PL]
+> Website for freelancer artist.
 > Live demo [_here_](https://konkogutagnieszka.github.io/canned/).
 
 ## Table of Contents
