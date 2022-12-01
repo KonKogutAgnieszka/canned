@@ -1,45 +1,46 @@
+.digital__wrapper {
+  width: 90%;
+}
+
 .digital__title {
-  margin: 2em;
+  margin: 1em;
   text-align: center;
   color: $black;
   font-weight: 500;
 }
 
 .digital__section {
+  margin: 0 auto;
+  padding: 1em 0.5em 3em;
+  text-align: center;
+  width: 45%;
+  background-color: $pink;
+  color: $black;
+  @include breakpoint-up(large) {
+    width: 45%;
+    height: 90%;
+  }
   &__title {
     margin: 0.5em 0;
     font-size: $font-xl;
     font-weight: 400;
   }
-  margin: 0 auto;
-  display: flex;
-  padding: 1em 0.5em 3em;
-  flex-direction: column;
-  text-align: center;
-  width: 90%;
-  background-color: $pink;
-  border-radius: 1em;
-  box-shadow: 2px 2px 2px 2px $black;
-  color: $black;
   &__gallery {
-    padding: 0 0.2em;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: auto;
-    place-items: center;
-    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     &__item {
-      margin: 10px auto;
-      display: block;
-      width: 120px;
-      height: 120px;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 2px 2px 2px 2px $black;
+      margin: 8px 8px;
+      display: inline-block;
       cursor: pointer;
+      height: 160px;
+      @include breakpoint-up(large) {
+        height: 120px;
+        width: auto;
+      }
     }
     &__item img {
-      object-fit: contain;
+      height: inherit;
     }
   }
 }
@@ -56,7 +57,7 @@
     display: flex;
     justify-content: flex-end;
     &__img {
-      margin-right: 10px;
+      margin-right: 15px;
       height: 50px;
       cursor: pointer;
     }
@@ -94,20 +95,6 @@
 
 .hide {
   transform: translateY(100vh);
-}
-
-@include breakpoint-up(large) {
-  .digital__section {
-    width: 50%;
-    &__gallery {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      padding: 0 3em;
-      &__item {
-        width: 150px;
-        height: 150px;
-      }
-    }
-  }
 }
 
 .back {

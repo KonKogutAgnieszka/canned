@@ -2,10 +2,13 @@
   background-color: $white;
   color: $black;
   box-shadow: 2px 2px 2px 2px $black;
-  margin: 1rem auto 2rem;
-  width: 90%;
+  width: 35%;
   border-radius: 1em;
   padding: 1rem;
+  @include breakpoint-up(large) {
+    height: 70%;
+    width: 35%;
+  }
   &__header {
     text-align: center;
     margin-top: 1rem;
@@ -52,6 +55,10 @@
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px $black;
   transition: ease-in-out 0.2s;
+  @include breakpoint-up(large) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .price > h1 {
@@ -62,38 +69,13 @@
   text-align: center;
   font-size: $font-xl;
   font-weight: 400;
+  @include breakpoint-up(large) {
+    font-size: $font-med;
+  }
 }
 
 .price__value {
   text-align: center;
   border: 2px solid black;
   border-radius: 10px;
-}
-
-//desktop
-
-@include breakpoint-up(large) {
-  .price {
-    width: 50%;
-  }
-
-  .image {
-    width: 150px;
-    height: 150px;
-  }
-
-  .price > h3 {
-    font-size: $font-med;
-  }
-}
-
-@include breakpoint-up(xlarge) {
-  .price {
-    width: 50%;
-  }
-
-  .image {
-    width: 150px;
-    height: 150px;
-  }
 }
