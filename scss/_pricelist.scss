@@ -2,13 +2,11 @@
   margin: 0 auto;
   background-color: $white;
   color: $black;
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   text-align: center;
   @include breakpoint-up(large) {
-    height: 70%;
-    width: 35%;
-    text-align: left;
+    padding: 0.5rem;
   }
   &__header {
     margin-top: 1rem;
@@ -55,8 +53,8 @@
   box-shadow: 1px 1px 1px 1px $black;
   transition: ease-in-out 0.2s;
   @include breakpoint-up(large) {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -75,6 +73,9 @@
 }
 
 .price__value {
+  margin: 0.5rem auto;
+  width: 50%;
+  background-color: $lightpink;
   text-align: center;
-  border: 2px solid black;
+  box-shadow: 1px 1px 1px 1px $black;
 }

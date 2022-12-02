@@ -46,7 +46,6 @@
       font-size: $font-sm;
       color: $black;
       transition: 200ms ease-in-out;
-
       &::before {
         content: "";
         position: absolute;
@@ -75,6 +74,11 @@
       }
     }
   }
+}
+
+.active-subpage {
+  color: $burgund;
+  font-weight: 600;
 }
 
 .header__mobilemenu {

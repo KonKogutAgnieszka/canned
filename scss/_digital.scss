@@ -8,8 +8,11 @@
 //digital wrapper//
 
 .digital__wrapper {
+  margin: 1rem auto;
   width: 100%;
   @include breakpoint-up(large) {
+    margin: 2rem auto 1rem;
+    width: 100%;
     display: flex;
     justify-content: space-around;
   }
@@ -23,12 +26,13 @@
   background-color: $pink;
   color: $black;
   @include breakpoint-up(large) {
-    width: 45%;
-    height: 90%;
+    margin: 0;
+    padding: 0.2rem;
+    width: 50%;
   }
   &__title {
-    margin: 0.5em 0;
-    font-size: $font-xl;
+    margin: 1em 0;
+    font-size: $font-med;
     font-weight: 400;
   }
   &__gallery {
@@ -36,11 +40,12 @@
     flex-wrap: wrap;
     justify-content: center;
     &__item {
-      margin: 8px 8px;
+      margin: 0.5rem;
       display: inline-block;
       cursor: pointer;
       height: 100px;
       @include breakpoint-up(large) {
+        margin: 0.25rem 0.5rem;
         height: 120px;
         width: auto;
       }
@@ -117,20 +122,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @include breakpoint-up(large) {
+    width: 30%;
+  }
 }
 
 // additional info //
 .info {
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 2rem;
   width: 80%;
-  background-color: $lightpink;
   color: $black;
-  text-align: center;
+  text-align: left;
+  @include breakpoint-up(large) {
+    margin: 0 auto;
+    width: 100%;
+    height: 30%;
+  }
   a {
     color: $black;
   }
   img {
-    width: 40%;
+    width: 30%;
   }
 }
