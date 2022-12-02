@@ -96,7 +96,6 @@ button,
   display: inline-block;
   background-color: $white;
   color: $black;
-  border-radius: 25px;
   border: none;
   padding: 1rem 1.875rem;
   font-size: $font-med;
@@ -110,6 +109,10 @@ button:hover {
 }
 
 //Visibility
+
+.hide {
+  transform: translateY(100vh);
+}
 
 .hide-for-mobile {
   //hide for tablet and mobile

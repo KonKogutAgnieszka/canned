@@ -1,16 +1,16 @@
 .price {
+  margin: 0 auto;
   background-color: $white;
   color: $black;
-  box-shadow: 2px 2px 2px 2px $black;
-  width: 35%;
-  border-radius: 1em;
+  width: 80%;
   padding: 1rem;
+  text-align: center;
   @include breakpoint-up(large) {
     height: 70%;
     width: 35%;
+    text-align: left;
   }
   &__header {
-    text-align: center;
     margin-top: 1rem;
     font-size: $font-xl;
     font-weight: 400;
@@ -52,7 +52,6 @@
   display: block;
   width: 90px;
   height: 90px;
-  border-radius: 10px;
   box-shadow: 1px 1px 1px 1px $black;
   transition: ease-in-out 0.2s;
   @include breakpoint-up(large) {
@@ -62,11 +61,12 @@
 }
 
 .price > h1 {
+  margin: 0.5rem;
   font-size: $font-lg;
 }
 
 .price > h3 {
-  text-align: center;
+  margin: 0.5rem;
   font-size: $font-xl;
   font-weight: 400;
   @include breakpoint-up(large) {
@@ -77,5 +77,4 @@
 .price__value {
   text-align: center;
   border: 2px solid black;
-  border-radius: 10px;
 }

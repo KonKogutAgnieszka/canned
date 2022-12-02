@@ -30,6 +30,7 @@ galleryImg.forEach((item, index) => {
 
 galleryPopupClose.addEventListener("click", () => {
   galleryPopup.classList.toggle("hide");
+  galleryPopupImg.src = "";
 });
 
 galleryPopupArrowLeft.addEventListener("click", () => {

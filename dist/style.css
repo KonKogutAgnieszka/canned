@@ -111,7 +111,6 @@ button,
   display: inline-block;
   background-color: #f7fff7;
   color: #23202c;
-  border-radius: 25px;
   border: none;
   padding: 1rem 1.875rem;
   font-size: 1.125rem;
@@ -125,6 +124,12 @@ button,
 button:hover {
   color: #f7fff7;
   background-color: #b83253;
+}
+
+.hide {
+  -webkit-transform: translateY(100vh);
+      -ms-transform: translateY(100vh);
+          transform: translateY(100vh);
 }
 
 @media (max-width: 63.937em) {
@@ -548,10 +553,6 @@ a {
   resize: none;
 }
 
-.digital__wrapper {
-  width: 90%;
-}
-
 .digital__title {
   margin: 1em;
   text-align: center;
@@ -559,11 +560,24 @@ a {
   font-weight: 500;
 }
 
+.digital__wrapper {
+  width: 100%;
+}
+@media (min-width: 64em) {
+  .digital__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .digital__section {
   margin: 0 auto;
   padding: 1em 0.5em 3em;
   text-align: center;
-  width: 45%;
+  width: 80%;
   background-color: #fc666f;
   color: #23202c;
 }
@@ -592,7 +606,7 @@ a {
   margin: 8px 8px;
   display: inline-block;
   cursor: pointer;
-  height: 160px;
+  height: 100px;
 }
 @media (min-width: 64em) {
   .digital__section__gallery__item {
@@ -629,9 +643,15 @@ a {
           justify-content: flex-end;
 }
 .digital__gallery__popup__close__img {
-  margin-right: 15px;
-  height: 50px;
+  margin-right: 0;
+  height: 40px;
   cursor: pointer;
+}
+@media (min-width: 40em) {
+  .digital__gallery__popup__close__img {
+    margin-right: 15px;
+    height: 50px;
+  }
 }
 .digital__gallery__popup__nav {
   -webkit-box-align: center;
@@ -639,17 +659,24 @@ a {
           align-items: center;
   height: 90%;
 }
+.digital__gallery__popup__arrow {
+  top: 50%;
+  height: 40px;
+}
+@media (min-width: 40em) {
+  .digital__gallery__popup__arrow {
+    height: 50px;
+  }
+}
 .digital__gallery__popup__arrow--left {
   position: absolute;
-  top: 50%;
-  height: 50px;
   cursor: pointer;
   left: 2%;
+  top: 50%;
 }
 .digital__gallery__popup__arrow--right {
   position: absolute;
   top: 50%;
-  height: 50px;
   cursor: pointer;
   right: 2%;
 }
@@ -661,14 +688,8 @@ a {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 80%;
+  max-width: 70%;
   max-height: 80%;
-}
-
-.hide {
-  -webkit-transform: translateY(100vh);
-      -ms-transform: translateY(100vh);
-          transform: translateY(100vh);
 }
 
 .back {
@@ -681,23 +702,50 @@ a {
           justify-content: center;
 }
 
+.digital__about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.info {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80%;
+  background-color: #fb8985;
+  color: #23202c;
+  text-align: center;
+}
+.info a {
+  color: #23202c;
+}
+.info img {
+  width: 40%;
+}
+
 .price {
+  margin: 0 auto;
   background-color: #f7fff7;
   color: #23202c;
-  -webkit-box-shadow: 2px 2px 2px 2px #23202c;
-          box-shadow: 2px 2px 2px 2px #23202c;
-  width: 35%;
-  border-radius: 1em;
+  width: 80%;
   padding: 1rem;
+  text-align: center;
 }
 @media (min-width: 64em) {
   .price {
     height: 70%;
     width: 35%;
+    text-align: left;
   }
 }
 .price__header {
-  text-align: center;
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 400;
@@ -738,7 +786,6 @@ a {
   display: block;
   width: 90px;
   height: 90px;
-  border-radius: 10px;
   -webkit-box-shadow: 1px 1px 1px 1px #23202c;
           box-shadow: 1px 1px 1px 1px #23202c;
   -webkit-transition: ease-in-out 0.2s;
@@ -753,11 +800,12 @@ a {
 }
 
 .price > h1 {
+  margin: 0.5rem;
   font-size: 1.5rem;
 }
 
 .price > h3 {
-  text-align: center;
+  margin: 0.5rem;
   font-size: 2rem;
   font-weight: 400;
 }
@@ -770,7 +818,6 @@ a {
 .price__value {
   text-align: center;
   border: 2px solid black;
-  border-radius: 10px;
 }
 
 html {
