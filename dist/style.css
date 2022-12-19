@@ -383,6 +383,11 @@ a {
             justify-content: center;
   }
 }
+@media (min-width: 87.5em) {
+  .hero {
+    width: 70%;
+  }
+}
 .hero__image {
   margin-bottom: 0.5em;
   min-height: 17.5rem;
@@ -426,6 +431,12 @@ a {
 .features {
   min-height: 100vh;
 }
+@media (min-width: 87.5em) {
+  .features {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
 .features .feature__item {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -455,7 +466,6 @@ a {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
-  border: 2px solid #23202c;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -485,7 +495,6 @@ a {
   padding: 1em;
   width: 80%;
   background-color: #f7fff7;
-  border-radius: 1em;
 }
 @media (min-width: 64em) {
   .contact {
@@ -556,7 +565,6 @@ a {
 
 .input__frame {
   border: solid 2px #651b40;
-  border-radius: 0.5em;
   font-size: 1.125rem;
   resize: none;
 }
@@ -756,7 +764,13 @@ a {
   color: #23202c;
 }
 .info img {
-  width: 30%;
+  width: 40%;
+  height: auto;
+}
+@media (min-width: 87.5em) {
+  .info img {
+    width: 30%;
+  }
 }
 
 .price {

@@ -1,5 +1,9 @@
 .features {
   min-height: 100vh;
+  @include breakpoint-up(xlarge) {
+    margin: 0 auto;
+    width: 70%;
+  }
   .feature__item {
     @include breakpoint-up(large) {
       margin: 0 auto;
@@ -17,7 +21,6 @@
       width: 12rem;
       height: 12rem;
       border-radius: 50%;
-      border: 2px solid $black;
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;

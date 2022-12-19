@@ -3,7 +3,6 @@
   padding: 1em;
   width: 80%;
   background-color: $white;
-  border-radius: 1em;
   @include breakpoint-up(large) {
     width: 60%;
   }
@@ -49,7 +48,6 @@
 
 .input__frame {
   border: solid 2px $burgund;
-  border-radius: 0.5em;
   font-size: $font-med;
   resize: none;
 }
