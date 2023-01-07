@@ -867,6 +867,59 @@ a {
           box-shadow: 1px 1px 1px 1px #23202c;
 }
 
+.woodburning__description {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #fc666f;
+}
+.woodburning__gallery {
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.woodburning__gallery__arrow {
+  width: 2.5rem;
+}
+.woodburning__gallery__img__container {
+  width: 11rem;
+  height: 11rem;
+}
+.woodburning__gallery__img__container > * {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  -webkit-transition: 1s fade-in;
+  -o-transition: 1s fade-in;
+  transition: 1s fade-in;
+}
+
+.top {
+  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.bottom {
+  width: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
 html {
   scroll-behavior: smooth;
 }

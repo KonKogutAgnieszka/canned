@@ -1,0 +1,46 @@
+.woodburning {
+  &__description {
+    margin: 0 auto;
+    width: 80%;
+    background-color: $pink;
+  }
+  &__gallery {
+    margin: 0 auto;
+    padding: 0.5rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__arrow {
+      width: 2.5rem;
+    }
+    &__img__container {
+      width: 11rem;
+      height: 11rem;
+      > * {
+        position: absolute;
+        width: 11rem;
+        height: 11rem;
+        transition: 1s fade-in;
+      }
+    }
+  }
+}
+
+.top {
+  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.bottom {
+  width: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
