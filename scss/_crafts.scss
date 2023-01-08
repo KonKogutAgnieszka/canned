@@ -1,3 +1,6 @@
+/* keychain size */
+$keychainSize: 11rem;
+
 .woodburning {
   &__description {
     margin: 0 auto;
@@ -17,11 +20,11 @@
     &__img__container {
       width: 11rem;
       height: 11rem;
+      cursor: pointer;
       > * {
         position: absolute;
-        width: 11rem;
-        height: 11rem;
-        transition: 1s fade-in;
+        width: $keychainSize;
+        height: $keychainSize;
       }
     }
   }
@@ -33,14 +36,81 @@
   margin-right: auto;
   left: 0;
   right: 0;
-  z-index: 1;
+  animation-name: flip-top;
+  animation-timing-function: linear;
+  animation-duration: 0.3s;
 }
 
 .bottom {
-  width: 10px;
+  width: 0;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  z-index: -1;
+  animation-name: flip-bottom;
+  animation-timing-function: linear;
+  animation-duration: 0.3s;
+}
+
+@keyframes flip-bottom {
+  0% {
+    background-color: $coinside;
+    width: $keychainSize;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 $coinside;
+  }
+  49% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 10px 0 $coinside;
+  }
+  50% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: 10px 0 $coinside;
+  }
+  100% {
+    background-color: $coinside;
+    width: 10px;
+    width: 0px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: 10px 0 $coinside;
+  }
+}
+
+@keyframes flip-top {
+  0% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: -10px 0 $coinside;
+  }
+  49% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: -10px 0 $coinside;
+  }
+  50% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    ox-shadow: -10px 0 $coinside;
+  }
+  100% {
+    background-color: $coinside;
+    width: $keychainSize;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 $coinside;
+  }
 }

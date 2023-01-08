@@ -867,6 +867,7 @@ a {
           box-shadow: 1px 1px 1px 1px #23202c;
 }
 
+/* keychain size */
 .woodburning__description {
   margin: 0 auto;
   width: 80%;
@@ -892,14 +893,12 @@ a {
 .woodburning__gallery__img__container {
   width: 11rem;
   height: 11rem;
+  cursor: pointer;
 }
 .woodburning__gallery__img__container > * {
   position: absolute;
   width: 11rem;
   height: 11rem;
-  -webkit-transition: 1s fade-in;
-  -o-transition: 1s fade-in;
-  transition: 1s fade-in;
 }
 
 .top {
@@ -908,18 +907,165 @@ a {
   margin-right: auto;
   left: 0;
   right: 0;
-  z-index: 1;
+  -webkit-animation-name: flip-top;
+          animation-name: flip-top;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 .bottom {
-  width: 10px;
+  width: 0;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  z-index: -1;
+  -webkit-animation-name: flip-bottom;
+          animation-name: flip-bottom;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
+@-webkit-keyframes flip-bottom {
+  0% {
+    background-color: #5c352f;
+    width: 11rem;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 #5c352f;
+            box-shadow: 0 0 #5c352f;
+  }
+  49% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-box-shadow: 10px 0 #5c352f;
+            box-shadow: 10px 0 #5c352f;
+  }
+  50% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: 10px 0 #5c352f;
+            box-shadow: 10px 0 #5c352f;
+  }
+  100% {
+    background-color: #5c352f;
+    width: 10px;
+    width: 0px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: 10px 0 #5c352f;
+            box-shadow: 10px 0 #5c352f;
+  }
+}
+
+@keyframes flip-bottom {
+  0% {
+    background-color: #5c352f;
+    width: 11rem;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 #5c352f;
+            box-shadow: 0 0 #5c352f;
+  }
+  49% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-box-shadow: 10px 0 #5c352f;
+            box-shadow: 10px 0 #5c352f;
+  }
+  50% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: 10px 0 #5c352f;
+            box-shadow: 10px 0 #5c352f;
+  }
+  100% {
+    background-color: #5c352f;
+    width: 10px;
+    width: 0px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: 10px 0 #5c352f;
+            box-shadow: 10px 0 #5c352f;
+  }
+}
+@-webkit-keyframes flip-top {
+  0% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: -10px 0 #5c352f;
+            box-shadow: -10px 0 #5c352f;
+  }
+  49% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: -10px 0 #5c352f;
+            box-shadow: -10px 0 #5c352f;
+  }
+  50% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    ox-shadow: -10px 0 #5c352f;
+  }
+  100% {
+    background-color: #5c352f;
+    width: 11rem;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 #5c352f;
+            box-shadow: 0 0 #5c352f;
+  }
+}
+@keyframes flip-top {
+  0% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: -10px 0 #5c352f;
+            box-shadow: -10px 0 #5c352f;
+  }
+  49% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: -10px 0 #5c352f;
+            box-shadow: -10px 0 #5c352f;
+  }
+  50% {
+    background-color: #5c352f;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    ox-shadow: -10px 0 #5c352f;
+  }
+  100% {
+    background-color: #5c352f;
+    width: 11rem;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 #5c352f;
+            box-shadow: 0 0 #5c352f;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
