@@ -90,6 +90,7 @@
   transform: translateX(-50%);
   border-radius: 6px;
   background-color: $white;
+  z-index: 10;
   a {
     display: block;
     padding: 0.65rem;
@@ -122,6 +123,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 10;
 
   background-image: linear-gradient(#fb8985, #ffc29c70);
 }

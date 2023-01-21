@@ -1,44 +1,107 @@
-.has-fade{
+.has-fade {
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  0% {
     visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
 }
 
-@keyframes fade-in{
-    0%{
-        visibility: hidden;
-        opacity: 0;
-    }
-    1%{
-        visibility: visible;
-    }
-    100%{
-        visibility: visible;
-        opacity: 1;
-    }
-}
-.fade-in{
-    animation: fade-in 300ms ease-in-out forwards;
+@keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
-@keyframes fade-out{
-    0%{
-        visibility: visible;
-        opacity: 1;
-    }
-    99%{
-        visibility: visible;
-        opacity: 0;
-    }
-    100%{
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-.fade-out{
-    animation: fade-out 300ms ease-in-out forwards;
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
 }
 
 @keyframes enter {
-        
-    }
+}
 
+// coin animations //
+
+@keyframes flip-bottom {
+  0% {
+    background-color: $coinside;
+    width: $keychainSize;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 $coinside;
+  }
+  49% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 10px 0 $coinside;
+  }
+  50% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: 10px 0 $coinside;
+  }
+  100% {
+    background-color: $coinside;
+    width: 10px;
+    width: 0px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: 10px 0 $coinside;
+  }
+}
+
+@keyframes flip-top {
+  0% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: -10px 0 $coinside;
+  }
+  49% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: -10px 0 $coinside;
+  }
+  50% {
+    background-color: $coinside;
+    width: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    ox-shadow: -10px 0 $coinside;
+  }
+  100% {
+    background-color: $coinside;
+    width: $keychainSize;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 $coinside;
+  }
+}

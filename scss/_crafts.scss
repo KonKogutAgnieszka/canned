@@ -1,11 +1,20 @@
-/* keychain size */
-$keychainSize: 11rem;
-
 .woodburning {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-up(large) {
+    margin: 3rem 0;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
   &__description {
-    margin: 0 auto;
+    margin: 1.5rem auto 0;
+    padding: 0.5rem;
     width: 80%;
     background-color: $pink;
+    @include breakpoint-up(large) {
+      width: 45%;
+    }
   }
   &__gallery {
     margin: 0 auto;
@@ -14,10 +23,21 @@ $keychainSize: 11rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint-up(medium) {
+      justify-content: center;
+    }
+    @include breakpoint-up(large) {
+      width: 25%;
+    }
     &__arrow {
       width: 2.5rem;
+      cursor: pointer;
+      @include breakpoint-up(medium) {
+        margin: 1rem;
+      }
     }
     &__img__container {
+      position: relative;
       width: 11rem;
       height: 11rem;
       cursor: pointer;
@@ -25,6 +45,8 @@ $keychainSize: 11rem;
         position: absolute;
         width: $keychainSize;
         height: $keychainSize;
+        @include breakpoint-up(large) {
+        }
       }
     }
   }
@@ -50,67 +72,4 @@ $keychainSize: 11rem;
   animation-name: flip-bottom;
   animation-timing-function: linear;
   animation-duration: 0.3s;
-}
-
-@keyframes flip-bottom {
-  0% {
-    background-color: $coinside;
-    width: $keychainSize;
-    z-index: 1;
-    border-radius: 50%;
-    box-shadow: 0 0 $coinside;
-  }
-  49% {
-    background-color: $coinside;
-    width: 10px;
-    z-index: 1;
-    border-radius: 50%;
-    box-shadow: 10px 0 $coinside;
-  }
-  50% {
-    background-color: $coinside;
-    width: 10px;
-    z-index: -1;
-    border-radius: 50%;
-    box-shadow: 10px 0 $coinside;
-  }
-  100% {
-    background-color: $coinside;
-    width: 10px;
-    width: 0px;
-    z-index: -1;
-    border-radius: 50%;
-    box-shadow: 10px 0 $coinside;
-  }
-}
-
-@keyframes flip-top {
-  0% {
-    background-color: $coinside;
-    width: 10px;
-    z-index: -1;
-    border-radius: 50%;
-    box-shadow: -10px 0 $coinside;
-  }
-  49% {
-    background-color: $coinside;
-    width: 10px;
-    z-index: -1;
-    border-radius: 50%;
-    box-shadow: -10px 0 $coinside;
-  }
-  50% {
-    background-color: $coinside;
-    width: 10px;
-    z-index: 1;
-    border-radius: 50%;
-    ox-shadow: -10px 0 $coinside;
-  }
-  100% {
-    background-color: $coinside;
-    width: $keychainSize;
-    z-index: 1;
-    border-radius: 50%;
-    box-shadow: 0 0 $coinside;
-  }
 }
