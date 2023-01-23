@@ -1017,7 +1017,7 @@ a {
 }
 @media (min-width: 64em) {
   .woodburning {
-    margin: 3rem 0;
+    margin: 4rem auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1029,6 +1029,11 @@ a {
         align-content: center;
   }
 }
+@media (min-width: 87.5em) {
+  .woodburning {
+    width: 80%;
+  }
+}
 .woodburning__description {
   margin: 1.5rem auto 0;
   padding: 0.5rem;
@@ -1037,7 +1042,8 @@ a {
 }
 @media (min-width: 64em) {
   .woodburning__description {
-    width: 45%;
+    margin: 4rem 0;
+    max-width: 45%;
   }
 }
 .woodburning__gallery {
@@ -1063,7 +1069,8 @@ a {
 }
 @media (min-width: 64em) {
   .woodburning__gallery {
-    width: 25%;
+    margin: 0;
+    width: 40%;
   }
 }
 .woodburning__gallery__arrow {
