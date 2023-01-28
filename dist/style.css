@@ -468,7 +468,6 @@ a {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  border-radius: 6px;
   background-color: #f7fff7;
   z-index: 10;
 }
@@ -1007,6 +1006,7 @@ a {
 }
 
 .woodburning {
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
